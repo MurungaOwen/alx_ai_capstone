@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    width: 380px;
+    min-height: 500px;
+    color: #333;
+}
+
+.container {
+    background: white;
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.shield-icon {
+    font-size: 24px;
+}
+
+.header h1 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.main-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.status-section {
+    margin-bottom: 10px;
+}
+
+.status-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 16px;
+    border-radius: 12px;
+    border: 2px solid;
+    transition: all 0.3s ease;
+}
+
+.status-card.safe {
+    background: #d4edda;
+    border-color: #28a745;
+}
+
+.status-card.warning {
+    background: #fff3cd;
+    border-color: #ffc107;
+}
+
+.status-card.danger {
+    background: #f8d7da;
+    border-color: #dc3545;
+}
+
+.status-icon {
+    font-size: 24px;
+    min-width: 30px;
+}
+
+.status-text h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.status-text p {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.url-info {
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.url-info label {
+    font-weight: 600;
+    font-size: 12px;
+    color: #6c757d;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.url-display {
+    background: white;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+    font-size: 11px;
+    word-break: break-all;
+    max-height: 40px;
+    overflow-y: auto;
+}
+
+.scan-results h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #495057;
+}
+
+.api-results {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.api-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+}
+
+.api-name {
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.api-status {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.api-status.safe {
+    background: #d4edda;
+    color: #155724;
+}
+
+.api-status.warning {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.api-status.danger {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.api-status.checking {
+    background: #e2e3e5;
+    color: #6c757d;
+}
+
+.threat-score {
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.threat-score label {
+    font-weight: 600;
+    font-size: 12px;
+    color: #6c757d;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.score-bar {
+    position: relative;
+    background: #e9ecef;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.score-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #28a745 0%, #ffc107 50%, #dc3545 100%);
+    transition: width 0.5s ease;
+}
+
+.score-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 11px;
+    font-weight: 600;
+    color: #495057;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn.primary {
+    background: #007bff;
+    color: white;
+}
+
+.btn.primary:hover {
+    background: #0056b3;
+}
+
+.btn.secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn.secondary:hover {
+    background: #545b62;
+}
+
+.settings-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.settings-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.settings-link a:hover {
+    text-decoration: underline;
+}
+
+.loading {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

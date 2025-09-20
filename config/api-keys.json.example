@@ -1,0 +1,15 @@
+{
+  "google_safe_browsing": {
+    "api_key": "YOUR_GOOGLE_SAFE_BROWSING_API_KEY_HERE",
+    "base_url": "https://safebrowsing.googleapis.com/v4/threatMatches:find"
+  },
+  "virustotal": {
+    "api_key": "YOUR_VIRUSTOTAL_API_KEY_HERE", 
+    "base_url": "https://www.virustotal.com/vtapi/v2"
+  },
+  "phishtank": {
+    "api_key": "YOUR_PHISHTANK_API_KEY_HERE",
+    "base_url": "https://checkurl.phishtank.com/checkurl/",
+    "user_agent": "phishing-detector-chrome-extension/1.0"
+  }
+}

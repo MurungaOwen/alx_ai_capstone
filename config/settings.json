@@ -1,0 +1,45 @@
+{
+  "extension": {
+    "name": "Phishing Detection Extension",
+    "version": "1.0.0",
+    "api_endpoint": "http://localhost:8000"
+  },
+  "detection": {
+    "threat_thresholds": {
+      "high_threat": 70,
+      "medium_threat": 30,
+      "low_threat": 10
+    },
+    "cache_timeout_minutes": 5,
+    "max_cache_size": 1000
+  },
+  "notifications": {
+    "show_warnings": true,
+    "show_safe_notifications": false,
+    "auto_close_notifications": true,
+    "notification_timeout_seconds": 10
+  },
+  "whitelist": [
+    "localhost",
+    "127.0.0.1",
+    "chrome://",
+    "chrome-extension://",
+    "edge://",
+    "about:"
+  ],
+  "blacklist": [],
+  "api_services": {
+    "google_safe_browsing": {
+      "enabled": true,
+      "weight": 40
+    },
+    "virustotal": {
+      "enabled": true,
+      "weight": 35
+    },
+    "phishtank": {
+      "enabled": true,
+      "weight": 25
+    }
+  }
+}
